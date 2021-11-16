@@ -228,7 +228,7 @@ void solve(int n)
     {
         if(valid_Mask(i)==1)
         {
-            for(j=0;j<=(1<<n)-1;j++)
+            for(j=i;j;j=(j-1)&i)
             {
                 if(valid_Submask(i,j,n)==1)
                 {
