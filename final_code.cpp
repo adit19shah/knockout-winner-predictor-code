@@ -66,15 +66,6 @@ bool valid_Mask(int mask)
 bool valid_Submask(int mask,int submask,int n)
 {
     int i,j,cnt1,cnt2;
-    
-    for(i=0;i<n;i++)
-    {
-        if((mask&(1<<i))==0 && (submask&(1<<i))!=0)
-        {
-            // submask cant be generated from given mask
-            return 0;
-        }
-    }
 
     //cnt1 and cnt2 are number of set bits in mask and submask respectively 
     cnt1=count_set_bits(mask);
